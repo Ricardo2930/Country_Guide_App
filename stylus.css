@@ -62,6 +62,7 @@ body {
 
 img {
   box-shadow: 1px 1px 15px slategray;
+  border-radius: 10px;
 }
 
 .info-box-country-name {

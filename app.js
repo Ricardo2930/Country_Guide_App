@@ -33,6 +33,8 @@ const getDataCountry = async (country) => {
     currencyName.push(key);
   }
 
+  const {googleMaps} = dataCountry.maps
+
   infoBox.innerHTML = `
         <section class="info-box-country">
             <img class="info-box-country-img" src=${dataCountry.flags.png}>
@@ -52,6 +54,9 @@ const getDataCountry = async (country) => {
             <h4 class="info-box-country-languages">
             Languages : <span class="country-data">${Object.values(dataCountry.languages).toString()}</span>
             </h4>
+            <a class="info-box-country-map" href="${googleMaps}" target="_blank>
+            <i class="fa-solid fa-map-location-dot"></i> Google Maps
+            </a>
         </section>
     `;
 };
